@@ -1,1 +1,46 @@
-{}
+{
+  "meta": {
+    "fetched_at": "2026-05-27T13:55:42Z",
+    "source": "cbr.ru"
+  },
+  "key_rate": {
+    "current": 14.5,
+    "effective_from": "2026-05-27",
+    "unit": "%_per_annum"
+  },
+  "ruonia": {
+    "latest": {
+      "date": "2026-05-26",
+      "rate": 14.21
+    }
+  },
+  "fx_rates": {
+    "date": "2026-05-27",
+    "GBP": {
+      "rate": 96.286,
+      "nominal": 1
+    },
+    "USD": {
+      "rate": 71.668,
+      "nominal": 1
+    },
+    "EUR": {
+      "rate": 83.2975,
+      "nominal": 1
+    },
+    "CNY": {
+      "rate": 10.5505,
+      "nominal": 1
+    }
+  },
+  "inflation": {
+    "latest": {
+      "period": "2026-04",
+      "yoy_pct": 5.58
+    },
+    "unit": "%_yoy"
+  },
+  "m2": {
+    "error": "M2 data is JavaScript-rendered on cbr.ru and cannot be scraped statically. Use the CBR website directly or find an alternative data source."
+  }
+}
