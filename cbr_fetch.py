@@ -138,15 +138,40 @@ def fetch_ruonia(from_date=None, to_date=None):
 
 # ── FX Rates ──────────────────────────────────────────────────────────────────
 
-CURRENCIES = ["USD", "EUR", "CNY", "GBP"]
+CURRENCIES = {"USD": "R01235", "EUR": "R01239", "CNY": "R01375", "GBP": "R01035"}
 
-def fetch_fx(date_str=None):
+def fetch_fx(date_str=None, from_date=None, to_date=None):
+    # Historical range: use XML_dynamic.asp per currency
+    if from_date:
+        result = {"from": to_iso(from_date), "to": to_iso(to_date or today())}
+        for code, val_id in CURRENCIES.items():
+            url = "https://cbr.ru/scripts/XML_dynamic.asp"
+            params = {
+                "date_req1": from_date,   # DD.MM.YYYY
+                "date_req2": to_date or today(),
+                "VAL_NM_RQ": val_id,
+            }
+            r = requests.get(url, params=params, timeout=15)
+            root = ET.fromstring(r.content)
+            series = []
+            for rec in root.findall("Record"):
+                try:
+                    nominal_el = rec.find("Nominal")
+                    nominal = int(nominal_el.text) if nominal_el is not None else 1
+                    series.append({
+                        "date": to_iso(rec.attrib["Date"]),
+                        "rate": round(parse_float(rec.find("Value").text) / nominal, 4),
+                    })
+                except (ValueError, KeyError, AttributeError):
+                    continue
+            result[code] = series
+        return result
+
+    # Single date: use XML_daily.asp
     url = "https://cbr.ru/scripts/XML_daily.asp"
     params = {"date_req": date_str} if date_str else {}
-
     r = requests.get(url, params=params, timeout=15)
     root = ET.fromstring(r.content)
-
     result = {"date": to_iso(root.attrib.get("Date", ""))}
     for valute in root.findall("Valute"):
         code = valute.find("CharCode").text
@@ -234,7 +259,7 @@ def main():
     fetchers = {
         "key_rate":  lambda: fetch_key_rate(args.from_date, args.to_date),
         "ruonia":    lambda: fetch_ruonia(args.from_date, args.to_date),
-        "fx_rates":  lambda: fetch_fx(args.to_date),
+        "fx_rates":  lambda: fetch_fx(args.to_date, args.from_date, args.to_date),
         "inflation": lambda: fetch_inflation(args.from_date, args.to_date),
         "m2":        lambda: fetch_m2(args.from_date, args.to_date),
     }

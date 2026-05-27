@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: '0 */4 * * *'   # every 4 hours
   workflow_dispatch:          # manual trigger
+    inputs:
+      history_from:
+        description: 'Backfill history from date (DD.MM.YYYY). Leave empty to skip backfill.'
+        required: false
+        default: ''
 
 jobs:
   fetch:
@@ -21,13 +26,23 @@ jobs:
       - name: Install dependencies
         run: pip install requests beautifulsoup4
 
-      - name: Fetch CBR data
+      - name: Fetch current snapshot
         run: python cbr_fetch.py --metric all > cbr_latest.json
+
+      - name: Backfill or update history
+        run: |
+          FROM="${{ github.event.inputs.history_from }}"
+          # Use provided from-date for manual backfill, otherwise YTD (Jan 1 current year)
+          if [ -z "$FROM" ]; then
+            FROM="01.01.$(date +%Y)"
+          fi
+          TO=$(date +%d.%m.%Y)
+          python cbr_fetch.py --metric all --from "$FROM" --to "$TO" > cbr_history.json
 
       - name: Commit if changed
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add cbr_latest.json
+          git add cbr_latest.json cbr_history.json
           git diff --cached --quiet || git commit -m "chore: refresh CBR data cache"
           git push
