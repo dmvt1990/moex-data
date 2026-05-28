@@ -1,6 +1,6 @@
 {
   "meta": {
-    "fetched_at": "2026-05-27T21:54:05Z",
+    "fetched_at": "2026-05-28T03:34:15Z",
     "source": "cbr.ru"
   },
   "key_rate": {
@@ -14,25 +14,6 @@
       "rate": 14.21
     }
   },
-  "fx_rates": {
-    "date": "2026-05-28",
-    "GBP": {
-      "rate": 95.3621,
-      "nominal": 1
-    },
-    "USD": {
-      "rate": 70.9012,
-      "nominal": 1
-    },
-    "EUR": {
-      "rate": 82.7224,
-      "nominal": 1
-    },
-    "CNY": {
-      "rate": 10.4557,
-      "nominal": 1
-    }
-  },
   "inflation": {
     "latest": {
       "period": "2026-04",
@@ -42,5 +23,8 @@
   },
   "m2": {
     "error": "M2 data is JavaScript-rendered on cbr.ru and cannot be scraped statically. Use the CBR website directly or find an alternative data source."
+  },
+  "errors": {
+    "fx_rates": "mismatched tag: line 99, column 2"
   }
 }
