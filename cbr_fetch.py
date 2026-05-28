@@ -240,12 +240,45 @@ def fetch_m2(from_date=None, to_date=None):
                      "Use the CBR website directly or find an alternative data source."}
 
 
+# ── Gold (XML) ───────────────────────────────────────────────────────────────
+
+GOLD_CODE = "1"  # Code=1 → Gold (Au); 2=Silver, 3=Platinum, 4=Palladium
+
+def fetch_gold(from_date=None, to_date=None):
+    """Fetch CBR official gold accounting price (учётная цена) in RUB per gram."""
+    url = "https://cbr.ru/scripts/xml_metall.asp"
+    params = {
+        "date_req1": from_date or today(),
+        "date_req2": to_date or today(),
+    }
+    r = requests.get(url, params=params, timeout=15)
+    root = ET.fromstring(r.content)  # encoding declared in XML header
+
+    history = []
+    for rec in root.findall("Record"):
+        if rec.get("Code") == GOLD_CODE:
+            try:
+                history.append({
+                    "date": to_iso(rec.attrib["Date"]),
+                    "rate": parse_float(rec.find("Buy").text),
+                })
+            except (ValueError, KeyError, AttributeError):
+                continue
+
+    history.sort(key=lambda x: x["date"])
+    latest = history[-1] if history else None
+
+    if from_date:
+        return {"latest": latest, "unit": "RUB_per_gram", "history": history}
+    return {"latest": latest, "unit": "RUB_per_gram"}
+
+
 # ── CLI ───────────────────────────────────────────────────────────────────────
 
 def main():
     parser = argparse.ArgumentParser(description="Fetch CBR data as JSON")
     parser.add_argument("--metric", required=True,
-                        choices=["key_rate", "ruonia", "fx_rates", "inflation", "m2", "all"])
+                        choices=["key_rate", "ruonia", "fx_rates", "inflation", "m2", "gold", "all"])
     parser.add_argument("--from", dest="from_date", default=None,
                         metavar="DD.MM.YYYY", help="Start date for historical queries")
     parser.add_argument("--to", dest="to_date", default=None,
@@ -262,6 +295,7 @@ def main():
         "fx_rates":  lambda: fetch_fx(args.to_date, args.from_date, args.to_date),
         "inflation": lambda: fetch_inflation(args.from_date, args.to_date),
         "m2":        lambda: fetch_m2(args.from_date, args.to_date),
+        "gold":      lambda: fetch_gold(args.from_date, args.to_date),
     }
 
     targets = list(fetchers.keys()) if args.metric == "all" else [args.metric]
