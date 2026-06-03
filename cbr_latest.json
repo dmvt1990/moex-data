@@ -1,15 +1,18 @@
 {
   "meta": {
-    "fetched_at": "2026-06-03T04:03:46Z",
+    "fetched_at": "2026-06-03T12:42:05Z",
     "source": "cbr.ru"
   },
   "key_rate": {
     "current": 14.5,
-    "effective_from": "2026-06-02",
+    "effective_from": "2026-06-03",
     "unit": "%_per_annum"
   },
   "ruonia": {
-    "error": "Table not found on RUONIA page"
+    "latest": {
+      "date": "2026-06-02",
+      "rate": 14.17
+    }
   },
   "fx_rates": {
     "date": "2026-06-03",
@@ -31,7 +34,11 @@
     }
   },
   "inflation": {
-    "error": "HTTP 403 from inflation page"
+    "latest": {
+      "period": "2026-04",
+      "yoy_pct": 5.58
+    },
+    "unit": "%_yoy"
   },
   "m2": {
     "error": "M2 data is JavaScript-rendered on cbr.ru and cannot be scraped statically. Use the CBR website directly or find an alternative data source."
