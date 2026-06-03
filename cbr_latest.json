@@ -1,6 +1,6 @@
 {
   "meta": {
-    "fetched_at": "2026-06-03T12:42:05Z",
+    "fetched_at": "2026-06-03T19:48:59Z",
     "source": "cbr.ru"
   },
   "key_rate": {
@@ -15,30 +15,26 @@
     }
   },
   "fx_rates": {
-    "date": "2026-06-03",
+    "date": "2026-06-04",
     "GBP": {
-      "rate": 97.4985,
+      "rate": 98.8085,
       "nominal": 1
     },
     "USD": {
-      "rate": 72.5597,
+      "rate": 73.3436,
       "nominal": 1
     },
     "EUR": {
-      "rate": 84.6096,
+      "rate": 85.1243,
       "nominal": 1
     },
     "CNY": {
-      "rate": 10.7312,
+      "rate": 10.8262,
       "nominal": 1
     }
   },
   "inflation": {
-    "latest": {
-      "period": "2026-04",
-      "yoy_pct": 5.58
-    },
-    "unit": "%_yoy"
+    "error": "HTTP 403 from inflation page"
   },
   "m2": {
     "error": "M2 data is JavaScript-rendered on cbr.ru and cannot be scraped statically. Use the CBR website directly or find an alternative data source."
