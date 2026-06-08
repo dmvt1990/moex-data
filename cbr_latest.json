@@ -1,6 +1,6 @@
 {
   "meta": {
-    "fetched_at": "2026-06-07T21:12:11Z",
+    "fetched_at": "2026-06-08T03:58:42Z",
     "source": "cbr.ru"
   },
   "key_rate": {
@@ -34,7 +34,11 @@
     }
   },
   "inflation": {
-    "error": "HTTP 403 from inflation page"
+    "latest": {
+      "period": "2026-04",
+      "yoy_pct": 5.58
+    },
+    "unit": "%_yoy"
   },
   "m2": {
     "error": "M2 data is JavaScript-rendered on cbr.ru and cannot be scraped statically. Use the CBR website directly or find an alternative data source."
