@@ -1,6 +1,6 @@
 {
   "meta": {
-    "fetched_at": "2026-06-08T21:49:42Z",
+    "fetched_at": "2026-06-09T03:28:34Z",
     "source": "cbr.ru"
   },
   "key_rate": {
@@ -44,7 +44,10 @@
     "error": "M2 data is JavaScript-rendered on cbr.ru and cannot be scraped statically. Use the CBR website directly or find an alternative data source."
   },
   "gold": {
-    "latest": null,
+    "latest": {
+      "date": "2026-06-09",
+      "rate": 10282.13
+    },
     "unit": "RUB_per_gram"
   }
 }
