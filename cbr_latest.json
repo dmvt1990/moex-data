@@ -1,6 +1,6 @@
 {
   "meta": {
-    "fetched_at": "2026-06-10T22:02:20Z",
+    "fetched_at": "2026-06-11T03:56:47Z",
     "source": "cbr.ru"
   },
   "key_rate": {
@@ -34,19 +34,15 @@
     }
   },
   "inflation": {
-    "latest": {
-      "period": "2026-05",
-      "yoy_pct": 5.31
-    },
-    "unit": "%_yoy"
+    "error": "HTTP 403 from inflation page"
   },
   "m2": {
     "error": "M2 data is JavaScript-rendered on cbr.ru and cannot be scraped statically. Use the CBR website directly or find an alternative data source."
   },
   "gold": {
     "latest": {
-      "date": "2026-06-10",
-      "rate": 9964.29
+      "date": "2026-06-11",
+      "rate": 9988.54
     },
     "unit": "RUB_per_gram"
   }
