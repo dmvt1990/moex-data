@@ -1,35 +1,44 @@
 {
   "meta": {
-    "fetched_at": "2026-06-11T08:49:00Z",
+    "fetched_at": "2026-06-11T16:00:11Z",
     "source": "cbr.ru"
   },
   "key_rate": {
-    "error": "Table not found on key rate page"
+    "current": 14.5,
+    "effective_from": "2026-06-11",
+    "unit": "%_per_annum"
   },
   "ruonia": {
-    "error": "Table not found on RUONIA page"
+    "latest": {
+      "date": "2026-06-10",
+      "rate": 13.96
+    }
   },
   "fx_rates": {
-    "date": "2026-06-11",
+    "date": "2026-06-12",
     "GBP": {
-      "rate": 96.1832,
+      "rate": 96.3707,
       "nominal": 1
     },
     "USD": {
-      "rate": 71.7892,
+      "rate": 71.9077,
       "nominal": 1
     },
     "EUR": {
-      "rate": 83.0816,
+      "rate": 82.9743,
       "nominal": 1
     },
     "CNY": {
-      "rate": 10.5825,
+      "rate": 10.6064,
       "nominal": 1
     }
   },
   "inflation": {
-    "error": "HTTP 403 from inflation page"
+    "latest": {
+      "period": "2026-05",
+      "yoy_pct": 5.31
+    },
+    "unit": "%_yoy"
   },
   "m2": {
     "error": "M2 data is JavaScript-rendered on cbr.ru and cannot be scraped statically. Use the CBR website directly or find an alternative data source."
