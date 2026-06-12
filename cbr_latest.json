@@ -1,13 +1,18 @@
 {
   "meta": {
-    "fetched_at": "2026-06-11T22:02:18Z",
+    "fetched_at": "2026-06-12T03:56:12Z",
     "source": "cbr.ru"
   },
   "key_rate": {
-    "error": "Table not found on key rate page"
+    "current": 14.5,
+    "effective_from": "2026-06-11",
+    "unit": "%_per_annum"
   },
   "ruonia": {
-    "error": "Table not found on RUONIA page"
+    "latest": {
+      "date": "2026-06-10",
+      "rate": 13.96
+    }
   },
   "fx_rates": {
     "date": "2026-06-12",
@@ -29,15 +34,19 @@
     }
   },
   "inflation": {
-    "error": "HTTP 403 from inflation page"
+    "latest": {
+      "period": "2026-05",
+      "yoy_pct": 5.31
+    },
+    "unit": "%_yoy"
   },
   "m2": {
     "error": "M2 data is JavaScript-rendered on cbr.ru and cannot be scraped statically. Use the CBR website directly or find an alternative data source."
   },
   "gold": {
     "latest": {
-      "date": "2026-06-11",
-      "rate": 9988.54
+      "date": "2026-06-12",
+      "rate": 9642.75
     },
     "unit": "RUB_per_gram"
   }
