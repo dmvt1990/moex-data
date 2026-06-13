@@ -1,6 +1,6 @@
 {
   "meta": {
-    "fetched_at": "2026-06-13T07:46:46Z",
+    "fetched_at": "2026-06-13T10:28:15Z",
     "source": "cbr.ru"
   },
   "key_rate": {
@@ -9,7 +9,10 @@
     "unit": "%_per_annum"
   },
   "ruonia": {
-    "error": "Table not found on RUONIA page"
+    "latest": {
+      "date": "2026-06-10",
+      "rate": 13.96
+    }
   },
   "fx_rates": {
     "date": "2026-06-12",
