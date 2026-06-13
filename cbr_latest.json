@@ -1,18 +1,13 @@
 {
   "meta": {
-    "fetched_at": "2026-06-13T10:28:15Z",
+    "fetched_at": "2026-06-13T13:58:36Z",
     "source": "cbr.ru"
   },
   "key_rate": {
-    "current": 14.5,
-    "effective_from": "2026-06-11",
-    "unit": "%_per_annum"
+    "error": "Table not found on key rate page"
   },
   "ruonia": {
-    "latest": {
-      "date": "2026-06-10",
-      "rate": 13.96
-    }
+    "error": "Table not found on RUONIA page"
   },
   "fx_rates": {
     "date": "2026-06-12",
