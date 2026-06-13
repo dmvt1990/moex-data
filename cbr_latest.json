@@ -1,10 +1,12 @@
 {
   "meta": {
-    "fetched_at": "2026-06-13T13:58:36Z",
+    "fetched_at": "2026-06-13T17:22:10Z",
     "source": "cbr.ru"
   },
   "key_rate": {
-    "error": "Table not found on key rate page"
+    "current": 14.5,
+    "effective_from": "2026-06-11",
+    "unit": "%_per_annum"
   },
   "ruonia": {
     "error": "Table not found on RUONIA page"
