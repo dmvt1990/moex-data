@@ -1,6 +1,6 @@
 {
   "meta": {
-    "fetched_at": "2026-06-24T10:49:33Z",
+    "fetched_at": "2026-06-24T14:29:03Z",
     "source": "cbr.ru"
   },
   "key_rate": {
@@ -488,16 +488,16 @@
   },
   "ruonia": {
     "latest": {
-      "date": "2026-06-22",
+      "date": "2026-06-23",
       "rate": 14.08
     },
     "history": [
       {
-        "date": "2026-06-19",
-        "rate": 13.74
+        "date": "2026-06-22",
+        "rate": 14.08
       },
       {
-        "date": "2026-06-22",
+        "date": "2026-06-23",
         "rate": 14.08
       }
     ]
@@ -2336,7 +2336,13 @@
     ]
   },
   "m2": {
-    "error": "M2 data is JavaScript-rendered on cbr.ru and cannot be scraped statically. Use the CBR website directly or find an alternative data source."
+    "latest": {
+      "period": "2026-06",
+      "value_bln_rub": 133633.8,
+      "yoy_pct": 13.05
+    },
+    "unit": "bln_rub | %_yoy",
+    "source": "cbr.ru/dataservice datasetId=7 «Всего»"
   },
   "gold": {
     "latest": {

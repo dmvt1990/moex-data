@@ -1,6 +1,6 @@
 {
   "meta": {
-    "fetched_at": "2026-06-24T10:49:30Z",
+    "fetched_at": "2026-06-24T14:28:58Z",
     "source": "cbr.ru"
   },
   "key_rate": {
@@ -10,26 +10,26 @@
   },
   "ruonia": {
     "latest": {
-      "date": "2026-06-22",
+      "date": "2026-06-23",
       "rate": 14.08
     }
   },
   "fx_rates": {
-    "date": "2026-06-24",
+    "date": "2026-06-25",
     "GBP": {
-      "rate": 98.961,
+      "rate": 98.7089,
       "nominal": 1
     },
     "USD": {
-      "rate": 74.62,
+      "rate": 74.7738,
       "nominal": 1
     },
     "EUR": {
-      "rate": 85.4847,
+      "rate": 85.1823,
       "nominal": 1
     },
     "CNY": {
-      "rate": 10.9947,
+      "rate": 10.9713,
       "nominal": 1
     }
   },
@@ -41,7 +41,13 @@
     "unit": "%_yoy"
   },
   "m2": {
-    "error": "M2 data is JavaScript-rendered on cbr.ru and cannot be scraped statically. Use the CBR website directly or find an alternative data source."
+    "latest": {
+      "period": "2026-06",
+      "value_bln_rub": 133633.8,
+      "yoy_pct": 13.05
+    },
+    "unit": "bln_rub | %_yoy",
+    "source": "cbr.ru/dataservice datasetId=7 «Всего»"
   },
   "gold": {
     "latest": {
