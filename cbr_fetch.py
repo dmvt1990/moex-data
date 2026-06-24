@@ -232,12 +232,58 @@ def fetch_inflation(from_date=None, to_date=None):
     return {"latest": latest, "unit": "%_yoy"}
 
 
-# ── M2 (HTML) ─────────────────────────────────────────────────────────────────
+# ── M2 (DataService API) ──────────────────────────────────────────────────────
+
+M2_PUBLICATION_ID = 5   # «Структура денежной массы»
+M2_DATASET_ID     = 7   # «Денежный агрегат М2» (header «Всего» = M2 total, млрд руб.)
 
 def fetch_m2(from_date=None, to_date=None):
-    """M2 page at cbr.ru/statistics/ms/ is JavaScript-rendered — no static table available."""
-    return {"error": "M2 data is JavaScript-rendered on cbr.ru and cannot be scraped statically. "
-                     "Use the CBR website directly or find an alternative data source."}
+    """M2 money supply (national definition) via CBR DataService REST API.
+
+    cbr.ru/statistics/ms/ is JS-rendered, but the DataService API behind it
+    serves the series as JSON. Dataset 7 = «Денежный агрегат М2»; the «Всего»
+    header is the M2 total in млрд руб. Returns the latest level + YoY %.
+    """
+    now = datetime.now()
+    url = "https://www.cbr.ru/dataservice/data"
+    params = {
+        "y1": now.year - 2, "y2": now.year,
+        "publicationId": M2_PUBLICATION_ID, "datasetId": M2_DATASET_ID, "lang": "ru",
+    }
+    try:
+        r = requests.get(url, params=params, timeout=20,
+                         headers={"User-Agent": "Mozilla/5.0"})
+        r.raise_for_status()
+        d = r.json()
+    except Exception as e:
+        return {"error": f"M2 DataService request failed: {e}"}
+
+    header = d.get("headerData", [])
+    total_id = next((h["id"] for h in header
+                     if str(h.get("elname", "")).strip().lower() == "всего"), None)
+
+    series = {}
+    for x in d.get("RawData", []):
+        if total_id is not None and x.get("colId") != total_id:
+            continue
+        period = str(x.get("date", ""))[:7]
+        if period and x.get("obs_val") is not None:
+            series[period] = float(x["obs_val"])
+
+    if not series:
+        return {"error": "M2 DataService: 'Всего' series not found"}
+
+    latest = max(series)
+    val = series[latest]
+    ly, lm = latest.split("-")
+    prev = series.get(f"{int(ly) - 1}-{lm}")
+    yoy = round((val / prev - 1) * 100, 2) if prev else None
+
+    return {
+        "latest": {"period": latest, "value_bln_rub": round(val, 1), "yoy_pct": yoy},
+        "unit": "bln_rub | %_yoy",
+        "source": "cbr.ru/dataservice datasetId=7 «Всего»",
+    }
 
 
 # ── Gold (XML) ───────────────────────────────────────────────────────────────
