@@ -1,16 +1,44 @@
 {
   "meta": {
-    "fetched_at": "2026-07-03T14:02:39Z",
+    "fetched_at": "2026-07-03T17:24:58Z",
     "source": "cbr.ru"
   },
   "key_rate": {
-    "error": "Table not found on key rate page"
+    "current": 14.25,
+    "effective_from": "2026-07-03",
+    "unit": "%_per_annum"
   },
   "ruonia": {
-    "error": "Table not found on RUONIA page"
+    "latest": {
+      "date": "2026-07-02",
+      "rate": 14.26
+    }
+  },
+  "fx_rates": {
+    "date": "2026-07-04",
+    "GBP": {
+      "rate": 103.298,
+      "nominal": 1
+    },
+    "USD": {
+      "rate": 77.2264,
+      "nominal": 1
+    },
+    "EUR": {
+      "rate": 88.0304,
+      "nominal": 1
+    },
+    "CNY": {
+      "rate": 11.3803,
+      "nominal": 1
+    }
   },
   "inflation": {
-    "error": "HTTP 403 from inflation page"
+    "latest": {
+      "period": "2026-05",
+      "yoy_pct": 5.31
+    },
+    "unit": "%_yoy"
   },
   "m2": {
     "latest": {
@@ -27,8 +55,5 @@
       "rate": 10246.05
     },
     "unit": "RUB_per_gram"
-  },
-  "errors": {
-    "fx_rates": "syntax error: line 1, column 0"
   }
 }
