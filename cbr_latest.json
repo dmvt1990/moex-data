@@ -1,13 +1,18 @@
 {
   "meta": {
-    "fetched_at": "2026-07-04T02:51:12Z",
+    "fetched_at": "2026-07-04T06:46:26Z",
     "source": "cbr.ru"
   },
   "key_rate": {
-    "error": "Table not found on key rate page"
+    "current": 14.25,
+    "effective_from": "2026-07-03",
+    "unit": "%_per_annum"
   },
   "ruonia": {
-    "error": "Table not found on RUONIA page"
+    "latest": {
+      "date": "2026-07-02",
+      "rate": 14.26
+    }
   },
   "fx_rates": {
     "date": "2026-07-04",
@@ -29,11 +34,7 @@
     }
   },
   "inflation": {
-    "latest": {
-      "period": "2026-05",
-      "yoy_pct": 5.31
-    },
-    "unit": "%_yoy"
+    "error": "HTTP 403 from inflation page"
   },
   "m2": {
     "latest": {
