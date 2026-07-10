@@ -5,7 +5,7 @@ cbr_fetch.py — fetch CBR macroeconomic data, output JSON to stdout.
 Usage:
   python3 cbr_fetch.py --metric <metric> [--from DD.MM.YYYY] [--to DD.MM.YYYY]
 
-Metrics: key_rate | ruonia | fx_rates | inflation | m2 | all
+Metrics: key_rate | ruonia | fx_rates | inflation | m2 | gold | trade | all
 
 Without --from/--to: returns current/latest value only.
 With --from: returns full history array from that date.
@@ -13,6 +13,7 @@ With --from: returns full history array from that date.
 
 import argparse
 import json
+import re
 import sys
 import xml.etree.ElementTree as ET
 from datetime import datetime
@@ -232,6 +233,100 @@ def fetch_inflation(from_date=None, to_date=None):
     return {"latest": latest, "unit": "%_yoy"}
 
 
+# ── Foreign trade in goods (DataService API) ─────────────────────────────────
+
+TRADE_PUBLICATION_ID = 9    # «Счет текущих операций»
+TRADE_DATASET_ID     = 13   # «Товары» — Сальдо / Экспорт / Импорт, млн долларов США
+TRADE_FIRST_YEAR     = 1994 # начало ряда по DTRange
+TRADE_ROLL           = 4    # окно скользящей суммы, кварталов (= 12 месяцев)
+
+_ROMAN_Q = {"I": 1, "II": 2, "III": 3, "IV": 4}
+
+def _parse_quarter(dt: str):
+    """«IV квартал 2012» → (2012, 4).
+
+    Нельзя брать год из поля `date`: у IV квартала там 1 января следующего года.
+    """
+    m = re.match(r"\s*(IV|I{1,3})\s+квартал\s+(\d{4})", str(dt))
+    if not m:
+        raise ValueError(f"Cannot parse quarter: {dt!r}")
+    return int(m.group(2)), _ROMAN_Q[m.group(1)]
+
+
+def fetch_trade(from_date=None, to_date=None):
+    """Экспорт/импорт товаров (методология платёжного баланса) через CBR DataService.
+
+    Ряд квартальный (с 1994 г.), значения в млн долларов США. Возвращаем скользящую
+    сумму за 4 квартала в млрд долларов — то есть «за 12 месяцев», как в бюджетном
+    графике. Месячных данных ЦБ в машиночитаемом виде не публикует: помесячная
+    разбивка есть только в оценке платёжного баланса за последний квартал.
+    """
+    now = datetime.now()
+    url = "https://www.cbr.ru/dataservice/data"
+    params = {
+        "y1": TRADE_FIRST_YEAR, "y2": now.year,
+        "publicationId": TRADE_PUBLICATION_ID, "datasetId": TRADE_DATASET_ID,
+        "lang": "ru",
+    }
+    try:
+        r = requests.get(url, params=params, timeout=25,
+                         headers={"User-Agent": "Mozilla/5.0"})
+        r.raise_for_status()
+        d = r.json()
+    except Exception as e:
+        return {"error": f"Trade DataService request failed: {e}"}
+
+    col = {}
+    for h in d.get("headerData", []):
+        name = str(h.get("elname", "")).strip().lower()
+        if name in ("экспорт", "импорт"):
+            col[name] = h["id"]
+    if len(col) != 2:
+        return {"error": "Trade DataService: колонки Экспорт/Импорт не найдены"}
+
+    quarters = {}
+    for x in d.get("RawData", []):
+        val = x.get("obs_val")
+        if val is None:
+            continue
+        try:
+            key = _parse_quarter(x.get("dt"))
+        except ValueError:
+            continue
+        slot = quarters.setdefault(key, {"order": str(x.get("date", ""))})
+        if x.get("colId") == col["экспорт"]:
+            slot["exp"] = float(val)
+        elif x.get("colId") == col["импорт"]:
+            slot["imp"] = float(val)
+
+    ordered = sorted((k for k, v in quarters.items() if "exp" in v and "imp" in v),
+                     key=lambda k: quarters[k]["order"])
+    if len(ordered) < TRADE_ROLL:
+        return {"error": "Trade DataService: недостаточно кварталов для скользящей суммы"}
+
+    history = []
+    for i in range(TRADE_ROLL - 1, len(ordered)):
+        window = ordered[i - TRADE_ROLL + 1 : i + 1]
+        exp = sum(quarters[k]["exp"] for k in window) / 1000.0   # млн $ → млрд $
+        imp = sum(quarters[k]["imp"] for k in window) / 1000.0
+        year, quarter = ordered[i]
+        history.append({
+            "period":      f"{year}-Q{quarter}",
+            "export_bln":  round(exp, 1),
+            "import_bln":  round(imp, 1),
+        })
+
+    latest = dict(history[-1])
+    latest["balance_bln"] = round(latest["export_bln"] - latest["import_bln"], 1)
+
+    return {
+        "latest": latest,
+        "unit": "bln_usd, trailing 4 quarters",
+        "history": history,
+        "source": "cbr.ru/dataservice publicationId=9 datasetId=13 «Товары»",
+    }
+
+
 # ── M2 (DataService API) ──────────────────────────────────────────────────────
 
 M2_PUBLICATION_ID = 5   # «Структура денежной массы»
@@ -324,7 +419,8 @@ def fetch_gold(from_date=None, to_date=None):
 def main():
     parser = argparse.ArgumentParser(description="Fetch CBR data as JSON")
     parser.add_argument("--metric", required=True,
-                        choices=["key_rate", "ruonia", "fx_rates", "inflation", "m2", "gold", "all"])
+                        choices=["key_rate", "ruonia", "fx_rates", "inflation", "m2", "gold",
+                                 "trade", "all"])
     parser.add_argument("--from", dest="from_date", default=None,
                         metavar="DD.MM.YYYY", help="Start date for historical queries")
     parser.add_argument("--to", dest="to_date", default=None,
@@ -342,6 +438,7 @@ def main():
         "inflation": lambda: fetch_inflation(args.from_date, args.to_date),
         "m2":        lambda: fetch_m2(args.from_date, args.to_date),
         "gold":      lambda: fetch_gold(args.from_date, args.to_date),
+        "trade":     lambda: fetch_trade(args.from_date, args.to_date),
     }
 
     targets = list(fetchers.keys()) if args.metric == "all" else [args.metric]
