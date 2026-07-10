@@ -1,6 +1,6 @@
 {
   "meta": {
-    "fetched_at": "2026-07-10T07:33:58Z",
+    "fetched_at": "2026-07-10T09:49:50Z",
     "source": "cbr.ru"
   },
   "key_rate": {
@@ -55,5 +55,647 @@
       "rate": 9926.43
     },
     "unit": "RUB_per_gram"
+  },
+  "trade": {
+    "latest": {
+      "period": "2026-Q1",
+      "export_bln": 422.9,
+      "import_bln": 313.2,
+      "balance_bln": 109.7
+    },
+    "unit": "bln_usd, trailing 4 quarters",
+    "history": [
+      {
+        "period": "1994-Q4",
+        "export_bln": 66.1,
+        "import_bln": 48.1
+      },
+      {
+        "period": "1995-Q1",
+        "export_bln": 71.9,
+        "import_bln": 50.2
+      },
+      {
+        "period": "1995-Q2",
+        "export_bln": 75.2,
+        "import_bln": 52.9
+      },
+      {
+        "period": "1995-Q3",
+        "export_bln": 77.0,
+        "import_bln": 56.3
+      },
+      {
+        "period": "1995-Q4",
+        "export_bln": 81.2,
+        "import_bln": 60.9
+      },
+      {
+        "period": "1996-Q1",
+        "export_bln": 82.7,
+        "import_bln": 64.2
+      },
+      {
+        "period": "1996-Q2",
+        "export_bln": 83.9,
+        "import_bln": 67.2
+      },
+      {
+        "period": "1996-Q3",
+        "export_bln": 85.3,
+        "import_bln": 68.8
+      },
+      {
+        "period": "1996-Q4",
+        "export_bln": 88.5,
+        "import_bln": 67.7
+      },
+      {
+        "period": "1997-Q1",
+        "export_bln": 88.4,
+        "import_bln": 66.5
+      },
+      {
+        "period": "1997-Q2",
+        "export_bln": 86.9,
+        "import_bln": 66.5
+      },
+      {
+        "period": "1997-Q3",
+        "export_bln": 86.7,
+        "import_bln": 68.0
+      },
+      {
+        "period": "1997-Q4",
+        "export_bln": 85.9,
+        "import_bln": 71.8
+      },
+      {
+        "period": "1998-Q1",
+        "export_bln": 83.6,
+        "import_bln": 74.4
+      },
+      {
+        "period": "1998-Q2",
+        "export_bln": 82.0,
+        "import_bln": 74.5
+      },
+      {
+        "period": "1998-Q3",
+        "export_bln": 79.7,
+        "import_bln": 69.5
+      },
+      {
+        "period": "1998-Q4",
+        "export_bln": 73.7,
+        "import_bln": 57.5
+      },
+      {
+        "period": "1999-Q1",
+        "export_bln": 70.0,
+        "import_bln": 48.3
+      },
+      {
+        "period": "1999-Q2",
+        "export_bln": 67.3,
+        "import_bln": 40.7
+      },
+      {
+        "period": "1999-Q3",
+        "export_bln": 65.6,
+        "import_bln": 36.3
+      },
+      {
+        "period": "1999-Q4",
+        "export_bln": 69.7,
+        "import_bln": 37.3
+      },
+      {
+        "period": "2000-Q1",
+        "export_bln": 78.4,
+        "import_bln": 38.1
+      },
+      {
+        "period": "2000-Q2",
+        "export_bln": 86.6,
+        "import_bln": 38.1
+      },
+      {
+        "period": "2000-Q3",
+        "export_bln": 94.4,
+        "import_bln": 39.6
+      },
+      {
+        "period": "2000-Q4",
+        "export_bln": 99.2,
+        "import_bln": 42.1
+      },
+      {
+        "period": "2001-Q1",
+        "export_bln": 100.7,
+        "import_bln": 43.4
+      },
+      {
+        "period": "2001-Q2",
+        "export_bln": 101.6,
+        "import_bln": 46.8
+      },
+      {
+        "period": "2001-Q3",
+        "export_bln": 100.8,
+        "import_bln": 49.0
+      },
+      {
+        "period": "2001-Q4",
+        "export_bln": 96.6,
+        "import_bln": 51.3
+      },
+      {
+        "period": "2002-Q1",
+        "export_bln": 93.1,
+        "import_bln": 52.5
+      },
+      {
+        "period": "2002-Q2",
+        "export_bln": 93.1,
+        "import_bln": 53.6
+      },
+      {
+        "period": "2002-Q3",
+        "export_bln": 96.5,
+        "import_bln": 56.1
+      },
+      {
+        "period": "2002-Q4",
+        "export_bln": 102.1,
+        "import_bln": 58.4
+      },
+      {
+        "period": "2003-Q1",
+        "export_bln": 111.0,
+        "import_bln": 62.0
+      },
+      {
+        "period": "2003-Q2",
+        "export_bln": 115.8,
+        "import_bln": 65.4
+      },
+      {
+        "period": "2003-Q3",
+        "export_bln": 121.5,
+        "import_bln": 69.1
+      },
+      {
+        "period": "2003-Q4",
+        "export_bln": 129.1,
+        "import_bln": 73.2
+      },
+      {
+        "period": "2004-Q1",
+        "export_bln": 135.4,
+        "import_bln": 77.0
+      },
+      {
+        "period": "2004-Q2",
+        "export_bln": 147.4,
+        "import_bln": 81.7
+      },
+      {
+        "period": "2004-Q3",
+        "export_bln": 161.4,
+        "import_bln": 87.1
+      },
+      {
+        "period": "2004-Q4",
+        "export_bln": 177.9,
+        "import_bln": 94.2
+      },
+      {
+        "period": "2005-Q1",
+        "export_bln": 190.9,
+        "import_bln": 100.3
+      },
+      {
+        "period": "2005-Q2",
+        "export_bln": 207.9,
+        "import_bln": 107.0
+      },
+      {
+        "period": "2005-Q3",
+        "export_bln": 224.5,
+        "import_bln": 114.9
+      },
+      {
+        "period": "2005-Q4",
+        "export_bln": 240.0,
+        "import_bln": 123.8
+      },
+      {
+        "period": "2006-Q1",
+        "export_bln": 257.3,
+        "import_bln": 129.3
+      },
+      {
+        "period": "2006-Q2",
+        "export_bln": 274.2,
+        "import_bln": 139.2
+      },
+      {
+        "period": "2006-Q3",
+        "export_bln": 289.0,
+        "import_bln": 149.1
+      },
+      {
+        "period": "2006-Q4",
+        "export_bln": 297.5,
+        "import_bln": 163.2
+      },
+      {
+        "period": "2007-Q1",
+        "export_bln": 301.2,
+        "import_bln": 175.1
+      },
+      {
+        "period": "2007-Q2",
+        "export_bln": 307.6,
+        "import_bln": 189.0
+      },
+      {
+        "period": "2007-Q3",
+        "export_bln": 315.9,
+        "import_bln": 204.9
+      },
+      {
+        "period": "2007-Q4",
+        "export_bln": 346.5,
+        "import_bln": 223.1
+      },
+      {
+        "period": "2008-Q1",
+        "export_bln": 384.7,
+        "import_bln": 240.2
+      },
+      {
+        "period": "2008-Q2",
+        "export_bln": 428.9,
+        "import_bln": 262.4
+      },
+      {
+        "period": "2008-Q3",
+        "export_bln": 476.3,
+        "import_bln": 287.4
+      },
+      {
+        "period": "2008-Q4",
+        "export_bln": 466.3,
+        "import_bln": 288.7
+      },
+      {
+        "period": "2009-Q1",
+        "export_bln": 415.7,
+        "import_bln": 266.6
+      },
+      {
+        "period": "2009-Q2",
+        "export_bln": 353.2,
+        "import_bln": 233.7
+      },
+      {
+        "period": "2009-Q3",
+        "export_bln": 300.3,
+        "import_bln": 197.5
+      },
+      {
+        "period": "2009-Q4",
+        "export_bln": 297.2,
+        "import_bln": 183.9
+      },
+      {
+        "period": "2010-Q1",
+        "export_bln": 329.5,
+        "import_bln": 191.0
+      },
+      {
+        "period": "2010-Q2",
+        "export_bln": 361.2,
+        "import_bln": 206.4
+      },
+      {
+        "period": "2010-Q3",
+        "export_bln": 375.3,
+        "import_bln": 227.2
+      },
+      {
+        "period": "2010-Q4",
+        "export_bln": 392.7,
+        "import_bln": 245.7
+      },
+      {
+        "period": "2011-Q1",
+        "export_bln": 414.3,
+        "import_bln": 265.6
+      },
+      {
+        "period": "2011-Q2",
+        "export_bln": 452.4,
+        "import_bln": 290.6
+      },
+      {
+        "period": "2011-Q3",
+        "export_bln": 485.1,
+        "import_bln": 306.1
+      },
+      {
+        "period": "2011-Q4",
+        "export_bln": 515.4,
+        "import_bln": 318.6
+      },
+      {
+        "period": "2012-Q1",
+        "export_bln": 534.8,
+        "import_bln": 326.1
+      },
+      {
+        "period": "2012-Q2",
+        "export_bln": 532.5,
+        "import_bln": 325.7
+      },
+      {
+        "period": "2012-Q3",
+        "export_bln": 529.3,
+        "import_bln": 329.6
+      },
+      {
+        "period": "2012-Q4",
+        "export_bln": 527.4,
+        "import_bln": 335.8
+      },
+      {
+        "period": "2013-Q1",
+        "export_bln": 521.2,
+        "import_bln": 340.1
+      },
+      {
+        "period": "2013-Q2",
+        "export_bln": 517.0,
+        "import_bln": 342.7
+      },
+      {
+        "period": "2013-Q3",
+        "export_bln": 522.4,
+        "import_bln": 342.9
+      },
+      {
+        "period": "2013-Q4",
+        "export_bln": 521.8,
+        "import_bln": 341.3
+      },
+      {
+        "period": "2014-Q1",
+        "export_bln": 519.8,
+        "import_bln": 337.1
+      },
+      {
+        "period": "2014-Q2",
+        "export_bln": 525.0,
+        "import_bln": 333.3
+      },
+      {
+        "period": "2014-Q3",
+        "export_bln": 520.0,
+        "import_bln": 326.5
+      },
+      {
+        "period": "2014-Q4",
+        "export_bln": 496.8,
+        "import_bln": 307.9
+      },
+      {
+        "period": "2015-Q1",
+        "export_bln": 464.2,
+        "import_bln": 280.1
+      },
+      {
+        "period": "2015-Q2",
+        "export_bln": 423.6,
+        "import_bln": 247.1
+      },
+      {
+        "period": "2015-Q3",
+        "export_bln": 376.6,
+        "import_bln": 216.5
+      },
+      {
+        "period": "2015-Q4",
+        "export_bln": 341.4,
+        "import_bln": 193.0
+      },
+      {
+        "period": "2016-Q1",
+        "export_bln": 311.7,
+        "import_bln": 186.4
+      },
+      {
+        "period": "2016-Q2",
+        "export_bln": 288.1,
+        "import_bln": 184.3
+      },
+      {
+        "period": "2016-Q3",
+        "export_bln": 280.3,
+        "import_bln": 187.0
+      },
+      {
+        "period": "2016-Q4",
+        "export_bln": 281.7,
+        "import_bln": 191.5
+      },
+      {
+        "period": "2017-Q1",
+        "export_bln": 303.8,
+        "import_bln": 201.5
+      },
+      {
+        "period": "2017-Q2",
+        "export_bln": 319.8,
+        "import_bln": 214.7
+      },
+      {
+        "period": "2017-Q3",
+        "export_bln": 333.3,
+        "import_bln": 226.0
+      },
+      {
+        "period": "2017-Q4",
+        "export_bln": 352.9,
+        "import_bln": 238.4
+      },
+      {
+        "period": "2018-Q1",
+        "export_bln": 371.9,
+        "import_bln": 247.8
+      },
+      {
+        "period": "2018-Q2",
+        "export_bln": 397.0,
+        "import_bln": 252.5
+      },
+      {
+        "period": "2018-Q3",
+        "export_bln": 423.2,
+        "import_bln": 251.4
+      },
+      {
+        "period": "2018-Q4",
+        "export_bln": 443.9,
+        "import_bln": 248.9
+      },
+      {
+        "period": "2019-Q1",
+        "export_bln": 445.0,
+        "import_bln": 246.8
+      },
+      {
+        "period": "2019-Q2",
+        "export_bln": 437.6,
+        "import_bln": 245.2
+      },
+      {
+        "period": "2019-Q3",
+        "export_bln": 430.2,
+        "import_bln": 247.7
+      },
+      {
+        "period": "2019-Q4",
+        "export_bln": 419.7,
+        "import_bln": 253.9
+      },
+      {
+        "period": "2020-Q1",
+        "export_bln": 406.3,
+        "import_bln": 254.4
+      },
+      {
+        "period": "2020-Q2",
+        "export_bln": 375.2,
+        "import_bln": 246.5
+      },
+      {
+        "period": "2020-Q3",
+        "export_bln": 351.0,
+        "import_bln": 241.6
+      },
+      {
+        "period": "2020-Q4",
+        "export_bln": 333.5,
+        "import_bln": 240.1
+      },
+      {
+        "period": "2021-Q1",
+        "export_bln": 337.6,
+        "import_bln": 247.0
+      },
+      {
+        "period": "2021-Q2",
+        "export_bln": 381.8,
+        "import_bln": 268.5
+      },
+      {
+        "period": "2021-Q3",
+        "export_bln": 435.0,
+        "import_bln": 285.9
+      },
+      {
+        "period": "2021-Q4",
+        "export_bln": 494.2,
+        "import_bln": 301.0
+      },
+      {
+        "period": "2022-Q1",
+        "export_bln": 555.4,
+        "import_bln": 307.9
+      },
+      {
+        "period": "2022-Q2",
+        "export_bln": 592.6,
+        "import_bln": 289.2
+      },
+      {
+        "period": "2022-Q3",
+        "export_bln": 602.2,
+        "import_bln": 280.4
+      },
+      {
+        "period": "2022-Q4",
+        "export_bln": 592.1,
+        "import_bln": 276.5
+      },
+      {
+        "period": "2023-Q1",
+        "export_bln": 541.8,
+        "import_bln": 281.4
+      },
+      {
+        "period": "2023-Q2",
+        "export_bln": 493.4,
+        "import_bln": 301.8
+      },
+      {
+        "period": "2023-Q3",
+        "export_bln": 460.8,
+        "import_bln": 308.6
+      },
+      {
+        "period": "2023-Q4",
+        "export_bln": 424.7,
+        "import_bln": 303.1
+      },
+      {
+        "period": "2024-Q1",
+        "export_bln": 422.4,
+        "import_bln": 295.5
+      },
+      {
+        "period": "2024-Q2",
+        "export_bln": 425.3,
+        "import_bln": 289.6
+      },
+      {
+        "period": "2024-Q3",
+        "export_bln": 425.3,
+        "import_bln": 292.5
+      },
+      {
+        "period": "2024-Q4",
+        "export_bln": 433.6,
+        "import_bln": 301.5
+      },
+      {
+        "period": "2025-Q1",
+        "export_bln": 429.0,
+        "import_bln": 301.2
+      },
+      {
+        "period": "2025-Q2",
+        "export_bln": 421.3,
+        "import_bln": 305.1
+      },
+      {
+        "period": "2025-Q3",
+        "export_bln": 420.0,
+        "import_bln": 302.9
+      },
+      {
+        "period": "2025-Q4",
+        "export_bln": 419.5,
+        "import_bln": 306.4
+      },
+      {
+        "period": "2026-Q1",
+        "export_bln": 422.9,
+        "import_bln": 313.2
+      }
+    ],
+    "source": "cbr.ru/dataservice publicationId=9 datasetId=13 «Товары»"
   }
 }
