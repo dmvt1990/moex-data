@@ -1,6 +1,6 @@
 {
   "meta": {
-    "fetched_at": "2026-07-23T10:21:28Z",
+    "fetched_at": "2026-07-23T13:56:16Z",
     "source": "cbr.ru"
   },
   "key_rate": {
@@ -10,8 +10,8 @@
   },
   "ruonia": {
     "latest": {
-      "date": "2026-07-21",
-      "rate": 14.57
+      "date": "2026-07-22",
+      "rate": 14.22
     }
   },
   "fx_rates": {
