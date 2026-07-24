@@ -1,6 +1,6 @@
 {
   "meta": {
-    "fetched_at": "2026-07-24T13:43:30Z",
+    "fetched_at": "2026-07-24T17:36:50Z",
     "source": "cbr.ru"
   },
   "key_rate": {
@@ -15,21 +15,21 @@
     }
   },
   "fx_rates": {
-    "date": "2026-07-24",
+    "date": "2026-07-25",
     "GBP": {
-      "rate": 104.8666,
+      "rate": 103.937,
       "nominal": 1
     },
     "USD": {
-      "rate": 78.4049,
+      "rate": 78.0308,
       "nominal": 1
     },
     "EUR": {
-      "rate": 89.4443,
+      "rate": 88.8927,
       "nominal": 1
     },
     "CNY": {
-      "rate": 11.5826,
+      "rate": 11.5025,
       "nominal": 1
     }
   },
