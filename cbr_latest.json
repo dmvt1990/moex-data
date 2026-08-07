@@ -1,6 +1,6 @@
 {
   "meta": {
-    "fetched_at": "2026-08-06T14:06:26Z",
+    "fetched_at": "2026-08-07T00:51:58Z",
     "source": "cbr.ru"
   },
   "key_rate": {
@@ -15,21 +15,21 @@
     }
   },
   "fx_rates": {
-    "date": "2026-08-06",
+    "date": "2026-08-07",
     "GBP": {
-      "rate": 108.8256,
+      "rate": 109.7294,
       "nominal": 1
     },
     "USD": {
-      "rate": 80.9293,
+      "rate": 81.4077,
       "nominal": 1
     },
     "EUR": {
-      "rate": 93.1901,
+      "rate": 94.0585,
       "nominal": 1
     },
     "CNY": {
-      "rate": 11.9684,
+      "rate": 12.0637,
       "nominal": 1
     }
   },
@@ -51,8 +51,8 @@
   },
   "gold": {
     "latest": {
-      "date": "2026-08-06",
-      "rate": 10626.82
+      "date": "2026-08-07",
+      "rate": 11010.0
     },
     "unit": "RUB_per_gram"
   },
