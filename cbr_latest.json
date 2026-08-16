@@ -1,6 +1,6 @@
 {
   "meta": {
-    "fetched_at": "2026-08-16T08:27:07Z",
+    "fetched_at": "2026-08-16T12:36:19Z",
     "source": "cbr.ru"
   },
   "key_rate": {
@@ -9,10 +9,7 @@
     "unit": "%_per_annum"
   },
   "ruonia": {
-    "latest": {
-      "date": "2026-08-13",
-      "rate": 13.98
-    }
+    "error": "Table not found on RUONIA page"
   },
   "fx_rates": {
     "date": "2026-08-15",
@@ -34,11 +31,7 @@
     }
   },
   "inflation": {
-    "latest": {
-      "period": "2026-07",
-      "yoy_pct": 5.98
-    },
-    "unit": "%_yoy"
+    "error": "HTTP 403 from inflation page"
   },
   "m2": {
     "latest": {
