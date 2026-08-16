@@ -1,10 +1,12 @@
 {
   "meta": {
-    "fetched_at": "2026-08-15T20:20:21Z",
+    "fetched_at": "2026-08-16T01:13:57Z",
     "source": "cbr.ru"
   },
   "key_rate": {
-    "error": "Table not found on key rate page"
+    "current": 14.0,
+    "effective_from": "2026-08-14",
+    "unit": "%_per_annum"
   },
   "ruonia": {
     "error": "Table not found on RUONIA page"
@@ -41,10 +43,7 @@
     "source": "cbr.ru/dataservice datasetId=7 «Всего»"
   },
   "gold": {
-    "latest": {
-      "date": "2026-08-15",
-      "rate": 11886.6
-    },
+    "latest": null,
     "unit": "RUB_per_gram"
   },
   "trade": {
