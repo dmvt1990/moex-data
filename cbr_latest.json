@@ -1,6 +1,6 @@
 {
   "meta": {
-    "fetched_at": "2026-08-20T08:36:32Z",
+    "fetched_at": "2026-08-20T12:46:22Z",
     "source": "cbr.ru"
   },
   "key_rate": {
@@ -10,8 +10,8 @@
   },
   "ruonia": {
     "latest": {
-      "date": "2026-08-18",
-      "rate": 13.93
+      "date": "2026-08-19",
+      "rate": 13.86
     }
   },
   "fx_rates": {
@@ -33,6 +33,13 @@
       "nominal": 1
     }
   },
+  "inflation": {
+    "latest": {
+      "period": "2026-07",
+      "yoy_pct": 5.98
+    },
+    "unit": "%_yoy"
+  },
   "m2": {
     "latest": {
       "period": "2026-07",
@@ -41,6 +48,13 @@
     },
     "unit": "bln_rub | %_yoy",
     "source": "cbr.ru/dataservice datasetId=7 «Всего»"
+  },
+  "gold": {
+    "latest": {
+      "date": "2026-08-20",
+      "rate": 12052.24
+    },
+    "unit": "RUB_per_gram"
   },
   "trade": {
     "latest": {
@@ -683,9 +697,5 @@
       }
     ],
     "source": "cbr.ru/dataservice publicationId=9 datasetId=13 «Товары»"
-  },
-  "errors": {
-    "inflation": "HTTPSConnectionPool(host='cbr.ru', port=443): Max retries exceeded with url: /statistics/ddkp/infl/?UniDbQuery.Posted=True&UniDbQuery.From=01.01.2024&UniDbQuery.To=20.08.2026 (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbr.ru', port=443) at 0x7fb688ebfd10>, 'Connection to cbr.ru timed out. (connect timeout=15)'))",
-    "gold": "HTTPSConnectionPool(host='cbr.ru', port=443): Max retries exceeded with url: /scripts/xml_metall.asp?date_req1=20.08.2026&date_req2=20.08.2026 (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbr.ru', port=443) at 0x7fb688ebf560>, 'Connection to cbr.ru timed out. (connect timeout=15)'))"
   }
 }
