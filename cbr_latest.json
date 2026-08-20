@@ -1,12 +1,18 @@
 {
   "meta": {
-    "fetched_at": "2026-08-20T16:33:28Z",
+    "fetched_at": "2026-08-20T20:26:17Z",
     "source": "cbr.ru"
   },
   "key_rate": {
     "current": 14.0,
     "effective_from": "2026-08-20",
     "unit": "%_per_annum"
+  },
+  "ruonia": {
+    "latest": {
+      "date": "2026-08-19",
+      "rate": 13.86
+    }
   },
   "fx_rates": {
     "date": "2026-08-21",
@@ -35,7 +41,13 @@
     "unit": "%_yoy"
   },
   "m2": {
-    "error": "M2 DataService request failed: HTTPSConnectionPool(host='www.cbr.ru', port=443): Max retries exceeded with url: /dataservice/data?y1=2024&y2=2026&publicationId=5&datasetId=7&lang=ru (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.cbr.ru', port=443) at 0x7f59034274d0>, 'Connection to www.cbr.ru timed out. (connect timeout=20)'))"
+    "latest": {
+      "period": "2026-07",
+      "value_bln_rub": 134847.2,
+      "yoy_pct": 13.23
+    },
+    "unit": "bln_rub | %_yoy",
+    "source": "cbr.ru/dataservice datasetId=7 «Всего»"
   },
   "gold": {
     "latest": {
@@ -685,8 +697,5 @@
       }
     ],
     "source": "cbr.ru/dataservice publicationId=9 datasetId=13 «Товары»"
-  },
-  "errors": {
-    "ruonia": "('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
   }
 }
