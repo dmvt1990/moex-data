@@ -1,11 +1,11 @@
 {
   "meta": {
-    "fetched_at": "2026-08-21T04:36:31Z",
+    "fetched_at": "2026-08-21T08:38:37Z",
     "source": "cbr.ru"
   },
   "key_rate": {
     "current": 14.0,
-    "effective_from": "2026-08-20",
+    "effective_from": "2026-08-21",
     "unit": "%_per_annum"
   },
   "ruonia": {
@@ -42,9 +42,9 @@
   },
   "m2": {
     "latest": {
-      "period": "2026-07",
-      "value_bln_rub": 134847.2,
-      "yoy_pct": 13.23
+      "period": "2026-08",
+      "value_bln_rub": 135683.4,
+      "yoy_pct": 13.03
     },
     "unit": "bln_rub | %_yoy",
     "source": "cbr.ru/dataservice datasetId=7 «Всего»"
