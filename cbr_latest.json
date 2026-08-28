@@ -1,35 +1,29 @@
 {
   "meta": {
-    "fetched_at": "2026-08-28T04:02:50Z",
+    "fetched_at": "2026-08-28T19:54:19Z",
     "source": "cbr.ru"
   },
   "key_rate": {
     "current": 14.0,
-    "effective_from": "2026-08-27",
+    "effective_from": "2026-08-28",
     "unit": "%_per_annum"
   },
-  "ruonia": {
-    "latest": {
-      "date": "2026-08-26",
-      "rate": 13.74
-    }
-  },
   "fx_rates": {
-    "date": "2026-08-28",
+    "date": "2026-08-29",
     "GBP": {
-      "rate": 116.7944,
+      "rate": 116.2629,
       "nominal": 1
     },
     "USD": {
-      "rate": 85.9541,
+      "rate": 85.6007,
       "nominal": 1
     },
     "EUR": {
-      "rate": 100.2998,
+      "rate": 99.682,
       "nominal": 1
     },
     "CNY": {
-      "rate": 12.7691,
+      "rate": 12.7335,
       "nominal": 1
     }
   },
@@ -697,5 +691,8 @@
       }
     ],
     "source": "cbr.ru/dataservice publicationId=9 datasetId=13 «Товары»"
+  },
+  "errors": {
+    "ruonia": "HTTPSConnectionPool(host='cbr.ru', port=443): Read timed out. (read timeout=15)"
   }
 }
