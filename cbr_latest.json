@@ -1,12 +1,18 @@
 {
   "meta": {
-    "fetched_at": "2026-08-28T19:54:19Z",
+    "fetched_at": "2026-08-29T02:42:55Z",
     "source": "cbr.ru"
   },
   "key_rate": {
     "current": 14.0,
     "effective_from": "2026-08-28",
     "unit": "%_per_annum"
+  },
+  "ruonia": {
+    "latest": {
+      "date": "2026-08-27",
+      "rate": 13.61
+    }
   },
   "fx_rates": {
     "date": "2026-08-29",
@@ -45,8 +51,8 @@
   },
   "gold": {
     "latest": {
-      "date": "2026-08-28",
-      "rate": 12799.09
+      "date": "2026-08-29",
+      "rate": 12574.32
     },
     "unit": "RUB_per_gram"
   },
@@ -691,8 +697,5 @@
       }
     ],
     "source": "cbr.ru/dataservice publicationId=9 datasetId=13 «Товары»"
-  },
-  "errors": {
-    "ruonia": "HTTPSConnectionPool(host='cbr.ru', port=443): Read timed out. (read timeout=15)"
   }
 }
