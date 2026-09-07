@@ -1,11 +1,11 @@
 {
   "meta": {
-    "fetched_at": "2026-09-07T03:04:47Z",
+    "fetched_at": "2026-09-07T08:56:55Z",
     "source": "cbr.ru"
   },
   "key_rate": {
     "current": 14.0,
-    "effective_from": "2026-09-04",
+    "effective_from": "2026-09-07",
     "unit": "%_per_annum"
   },
   "ruonia": {
