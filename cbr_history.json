@@ -1,11 +1,11 @@
 {
   "meta": {
-    "fetched_at": "2026-09-14T03:33:42Z",
+    "fetched_at": "2026-09-14T09:35:28Z",
     "source": "cbr.ru"
   },
   "key_rate": {
     "current": 14.0,
-    "effective_from": "2026-09-11",
+    "effective_from": "2026-09-14",
     "unit": "%_per_annum",
     "history": [
       {
@@ -710,6 +710,10 @@
       },
       {
         "date": "2026-09-11",
+        "rate": 14.0
+      },
+      {
+        "date": "2026-09-14",
         "rate": 14.0
       }
     ]
