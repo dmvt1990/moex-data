@@ -1,6 +1,6 @@
 {
   "meta": {
-    "fetched_at": "2026-09-18T08:46:42Z",
+    "fetched_at": "2026-09-18T15:53:55Z",
     "source": "cbr.ru"
   },
   "key_rate": {
@@ -10,26 +10,26 @@
   },
   "ruonia": {
     "latest": {
-      "date": "2026-09-16",
-      "rate": 14.22
+      "date": "2026-09-17",
+      "rate": 14.15
     }
   },
   "fx_rates": {
-    "date": "2026-09-18",
+    "date": "2026-09-19",
     "GBP": {
-      "rate": 113.6988,
+      "rate": 112.4289,
       "nominal": 1
     },
     "USD": {
-      "rate": 84.5093,
+      "rate": 84.1975,
       "nominal": 1
     },
     "EUR": {
-      "rate": 97.4984,
+      "rate": 96.6671,
       "nominal": 1
     },
     "CNY": {
-      "rate": 12.5788,
+      "rate": 12.567,
       "nominal": 1
     }
   },
@@ -42,9 +42,9 @@
   },
   "m2": {
     "latest": {
-      "period": "2026-08",
-      "value_bln_rub": 135683.4,
-      "yoy_pct": 13.03
+      "period": "2026-09",
+      "value_bln_rub": 137073.5,
+      "yoy_pct": 12.76
     },
     "unit": "bln_rub | %_yoy",
     "source": "cbr.ru/dataservice datasetId=7 «Всего»"
