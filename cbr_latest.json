@@ -1,6 +1,6 @@
 {
   "meta": {
-    "fetched_at": "2026-09-25T09:24:02Z",
+    "fetched_at": "2026-09-25T16:38:00Z",
     "source": "cbr.ru"
   },
   "key_rate": {
@@ -10,26 +10,26 @@
   },
   "ruonia": {
     "latest": {
-      "date": "2026-09-23",
-      "rate": 14.17
+      "date": "2026-09-24",
+      "rate": 14.1
     }
   },
   "fx_rates": {
-    "date": "2026-09-25",
+    "date": "2026-09-26",
     "GBP": {
-      "rate": 112.6274,
+      "rate": 111.4993,
       "nominal": 1
     },
     "USD": {
-      "rate": 84.9057,
+      "rate": 84.3414,
       "nominal": 1
     },
     "EUR": {
-      "rate": 96.8859,
+      "rate": 95.8709,
       "nominal": 1
     },
     "CNY": {
-      "rate": 12.65,
+      "rate": 12.5355,
       "nominal": 1
     }
   },
