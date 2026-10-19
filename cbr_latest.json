@@ -1,7 +1,44 @@
 {
   "meta": {
-    "fetched_at": "2026-10-18T22:13:36Z",
+    "fetched_at": "2026-10-19T03:25:02Z",
     "source": "cbr.ru"
+  },
+  "key_rate": {
+    "current": 14.0,
+    "effective_from": "2026-10-16",
+    "unit": "%_per_annum"
+  },
+  "ruonia": {
+    "latest": {
+      "date": "2026-10-15",
+      "rate": 13.91
+    }
+  },
+  "fx_rates": {
+    "date": "2026-10-17",
+    "GBP": {
+      "rate": 110.8185,
+      "nominal": 1
+    },
+    "USD": {
+      "rate": 83.6177,
+      "nominal": 1
+    },
+    "EUR": {
+      "rate": 93.7187,
+      "nominal": 1
+    },
+    "CNY": {
+      "rate": 12.495,
+      "nominal": 1
+    }
+  },
+  "inflation": {
+    "latest": {
+      "period": "2026-09",
+      "yoy_pct": 6.35
+    },
+    "unit": "%_yoy"
   },
   "m2": {
     "latest": {
@@ -662,11 +699,5 @@
       }
     ],
     "source": "cbr.ru/dataservice publicationId=9 datasetId=13 «Товары»"
-  },
-  "errors": {
-    "key_rate": "HTTPSConnectionPool(host='cbr.ru', port=443): Max retries exceeded with url: /hd_base/KeyRate/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbr.ru', port=443) at 0x7f13013b1d60>, 'Connection to cbr.ru timed out. (connect timeout=15)'))",
-    "ruonia": "HTTPSConnectionPool(host='cbr.ru', port=443): Max retries exceeded with url: /hd_base/ruonia/?UniDbQuery.Posted=True&UniDbQuery.From=01.01.2025&UniDbQuery.To=18.10.2026 (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbr.ru', port=443) at 0x7f1300b0aa20>, 'Connection to cbr.ru timed out. (connect timeout=15)'))",
-    "fx_rates": "HTTPSConnectionPool(host='cbr.ru', port=443): Max retries exceeded with url: /scripts/XML_daily.asp (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbr.ru', port=443) at 0x7f1300b09970>, 'Connection to cbr.ru timed out. (connect timeout=15)'))",
-    "inflation": "HTTPSConnectionPool(host='cbr.ru', port=443): Max retries exceeded with url: /statistics/ddkp/infl/?UniDbQuery.Posted=True&UniDbQuery.From=01.01.2024&UniDbQuery.To=18.10.2026 (Caused by ConnectTimeoutError(<HTTPSConnection(host='cbr.ru', port=443) at 0x7f1300b0b110>, 'Connection to cbr.ru timed out. (connect timeout=15)'))"
   }
 }
