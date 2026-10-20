@@ -1,6 +1,6 @@
 {
   "meta": {
-    "fetched_at": "2026-10-19T23:19:19Z",
+    "fetched_at": "2026-10-20T03:34:20Z",
     "source": "cbr.ru"
   },
   "key_rate": {
@@ -50,7 +50,10 @@
     "source": "cbr.ru/dataservice datasetId=7 «Всего»"
   },
   "gold": {
-    "latest": null,
+    "latest": {
+      "date": "2026-10-20",
+      "rate": 11158.77
+    },
     "unit": "RUB_per_gram"
   },
   "trade": {
