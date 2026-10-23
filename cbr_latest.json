@@ -1,6 +1,6 @@
 {
   "meta": {
-    "fetched_at": "2026-10-22T22:58:14Z",
+    "fetched_at": "2026-10-23T03:32:05Z",
     "source": "cbr.ru"
   },
   "key_rate": {
@@ -51,8 +51,8 @@
   },
   "gold": {
     "latest": {
-      "date": "2026-10-22",
-      "rate": 10870.2
+      "date": "2026-10-23",
+      "rate": 10765.26
     },
     "unit": "RUB_per_gram"
   },
