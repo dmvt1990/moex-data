@@ -1,11 +1,11 @@
 {
   "meta": {
-    "fetched_at": "2026-11-08T20:12:43Z",
+    "fetched_at": "2026-11-09T04:49:15Z",
     "source": "cbr.ru"
   },
   "key_rate": {
     "current": 14.0,
-    "effective_from": "2026-11-06",
+    "effective_from": "2026-11-09",
     "unit": "%_per_annum",
     "history": [
       {
@@ -867,6 +867,10 @@
       {
         "date": "2026-11-06",
         "rate": 14.0
+      },
+      {
+        "date": "2026-11-09",
+        "rate": 14.0
       }
     ]
   },
@@ -888,7 +892,7 @@
   },
   "fx_rates": {
     "from": "2026-01-01",
-    "to": "2026-11-08",
+    "to": "2026-11-09",
     "USD": [
       {
         "date": "2026-01-13",
