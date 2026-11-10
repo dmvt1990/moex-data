@@ -1,11 +1,11 @@
 {
   "meta": {
-    "fetched_at": "2026-11-10T02:33:33Z",
+    "fetched_at": "2026-11-10T12:08:18Z",
     "source": "cbr.ru"
   },
   "key_rate": {
     "current": 14.0,
-    "effective_from": "2026-11-09",
+    "effective_from": "2026-11-10",
     "unit": "%_per_annum",
     "history": [
       {
@@ -871,22 +871,26 @@
       {
         "date": "2026-11-09",
         "rate": 14.0
+      },
+      {
+        "date": "2026-11-10",
+        "rate": 14.0
       }
     ]
   },
   "ruonia": {
     "latest": {
-      "date": "2026-11-06",
-      "rate": 13.72
+      "date": "2026-11-09",
+      "rate": 13.93
     },
     "history": [
       {
-        "date": "2026-11-05",
-        "rate": 13.78
-      },
-      {
         "date": "2026-11-06",
         "rate": 13.72
+      },
+      {
+        "date": "2026-11-09",
+        "rate": 13.93
       }
     ]
   },
