@@ -1,11 +1,11 @@
 {
   "meta": {
-    "fetched_at": "2026-11-19T22:54:32Z",
+    "fetched_at": "2026-11-20T05:51:15Z",
     "source": "cbr.ru"
   },
   "key_rate": {
     "current": 14.0,
-    "effective_from": "2026-11-19",
+    "effective_from": "2026-11-20",
     "unit": "%_per_annum"
   },
   "ruonia": {
@@ -51,8 +51,8 @@
   },
   "gold": {
     "latest": {
-      "date": "2026-11-19",
-      "rate": 10199.63
+      "date": "2026-11-20",
+      "rate": 9902.42
     },
     "unit": "RUB_per_gram"
   },
