@@ -1,6 +1,6 @@
 {
   "meta": {
-    "fetched_at": "2026-11-25T13:54:26Z",
+    "fetched_at": "2026-11-25T23:59:32Z",
     "source": "cbr.ru"
   },
   "key_rate": {
@@ -4488,8 +4488,8 @@
   },
   "inflation": {
     "latest": {
-      "period": "2026-09",
-      "yoy_pct": 6.35
+      "period": "2026-10",
+      "yoy_pct": 6.87
     },
     "unit": "%_yoy",
     "history": [
@@ -4528,6 +4528,10 @@
       {
         "period": "2026-09",
         "yoy_pct": 6.35
+      },
+      {
+        "period": "2026-10",
+        "yoy_pct": 6.87
       }
     ]
   },
